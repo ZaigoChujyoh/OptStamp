@@ -1,4 +1,4 @@
-//Ver1.1---------------------------------------------------------------------
+//Ver1.2---------------------------------------------------------------------
 
 //---------------------------------------------------------------------------
 
@@ -68,6 +68,7 @@ function stamp(){
 for(j=0; j<list_read.length; j++){
 	name = list_read[j];
 	run("AVI...", "select="+dir+name+" avi="+dir+name); //virtual stackで開かないようにする（open(path)だとvirtual stackで開く）
+	run("RGB color");
 	extension = indexOf(name, "."); //拡張子(.を含む)
 	namewithoutextension = substring(name, 0, extension); //元データは"namewithoutextension + extension"
 	stamp();
